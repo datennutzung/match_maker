@@ -15,7 +15,7 @@ var s = {
     "matched_text": "",
     "counter": 1,
     "keys": [],
-}
+};
 
 function start() {
     try {
@@ -80,8 +80,8 @@ function read_file_as_text(file, s_name) {
     try {
         const reader = new FileReader();
         reader.onload = function() {
-            load_file(s_name, reader.result)
-        }
+            load_file(s_name, reader.result);
+        };
         reader.readAsText(file);
     } catch (error) {
         throw error;
@@ -108,7 +108,7 @@ function submit() {
     if (first_key_span.innerText != "") {
         s.sysinfo[first_key_span.innerText].origin_name = origin_name_input.value;
         s.sysinfo[first_key_span.innerText].origin_descr = origin_descr_input.value;
-        load_key() 
+        load_key();
     }
 }
 
