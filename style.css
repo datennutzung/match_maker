@@ -1,0 +1,75 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 3rem 15rem 1fr;
+    gap: 1rem;
+}
+
+.filePicker {
+    float: left;
+}
+
+.filePicker label, input{
+    display: block;
+    margin-right: 1rem;
+}
+
+#file_picker_container {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+#key_container {
+    background-color: lightgray;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    border: 3px solid black;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+#table_container {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+}
+
+#save_to_file_button {
+    float: right;
+    margin-right: 1rem;
+}
+
+#progress_span {
+    margin-left: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+tbody tr{
+    cursor: pointer;
+}
+
+table, th, td {
+    padding: 0.5rem;
+    text-align: center;
+    border-bottom: 1px solid darkgray;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #dfdfdf;
+}
+
+tbody tr:hover {
+    border: 2px solid black;
+}
+
+th {
+    background-color: gray;
+    color: white;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Matchmaker</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link type="text/css" rel="stylesheet" href="./style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="gridContainer">
+            <div id="file_picker_container">
+                <div class="filePicker">
+                    <label for="sysinfo_file_picker">Sysinfo File:</label>
+                    <input type="file" id="sysinfo_file_picker" accept="application/json">
+                </div>
+                <div class="filePicker">
+                    <label for="matched_file_picker">Matched File:</label>
+                    <input type="file" id="matched_file_picker" accept="application/json">
+                </div>
+                <button onclick="start()">Start</button>
+            </div>
+            <div id="key_container">
+                <p>First Key: <span id="first_key_span"></span></p>
+                <p>Description: <span id="description_span"></span></p>
+                <p>Origin Name: <input id="origin_name_input" type="text" size="60"></p>
+                <p>Origin Description: <input id="origin_descr_input" type="text" size="60"></p>
+                <button onclick="submit()">Submit</button> <span id="progress_span">0/0</span>
+                <button onclick="save()" id="save_to_file_button">Save to file</button>
+            </div>
+            <div id="table_container">
+                <table id="possible_matches_table">
+                    <thead id="possible_matches_table_header">
+                        <th>Score</th>
+                        <th>Origin Name</th>
+                        <th>Origin Description</th>
+                    </thead>
+                    <tbody id="possible_matches_table_body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script type="text/javascript" src="./script.js"></script>
+    </body>
+</html>
